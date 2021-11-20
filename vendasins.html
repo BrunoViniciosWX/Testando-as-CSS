@@ -33,23 +33,48 @@ Assim ele recebe uma escala padrão de 1.0 independente do tipo de dispositivo e
 uma section para cada página que iremos configurar dentro do nosso site
 Enquanto no Footer -->
     <header id="header">
-        <nav>
-            <a class="logo" href="#" >LojaArcana</a>
+        <nav class="container">
+            <a class="logo" href="#" >Loja<span>Arcana</span></a>
             <div>...</div> 
         </nav>
 
     </header>
+    <!-- Colocamos um id ( identificador único no header) para que possamos editar específicamente ele
+    nas CSS sem configurar outras headers que iremos criar
+Nav é uma tag semântica para dizer que todos os elementos dentro dela serão elementos de clique
+elementos de navegação-->
 
     <main>
-<section>
-    <img src="/Site 1/stock-photo-frowning-medieval-scottish-warrior-battle.jfif" alt="Homem com manto portando um machado">
-<h1> Arcana é a loja número #1 de equipamentos para Warrior e equipamentos de classe mágica da 12° dimensão do universo!</h1>
+<section class= "section"id="home">
+    <div class="container grid" >
+        <div class="image">
+           <img src="stock-photo-frowning-medieval-scottish-warrior-battle.jfif" alt="Homem com manto portando um machado"> 
+        </div>
+        
+<div class="text">
+     <h1> Arcana é a loja número #1 de equipamentos para Warrior e equipamentos de classe mágica da 12° dimensão do universo!</h1>
 <p1> Desde de raros grimórios pré-prontos, poções míticas e ingredientes lendários como as lágrimas de fênix até 
     armaduras de nível campeão feita de escamas de dragão e as inquebravéis lâminas do tipo infernais ou angelicais como a 
     voraz gládio de guerra do arcanjo Malahidael, Arcana continua sendo umas da mais completas lojas para quem se desventura pela 12° camada
     da realidade!
 </p1>
-<a href="#">Fazer um Pedido</a> 
+<a class="button" href="#">Fazer um Pedido</a> 
+</div>
+       
+    </div>
+    
+</section>
+
+<!--Entre cada Section nós criamos um divisor para personalizar
+assim padronizamos o design entre uma página e outra do nosso HTML
+Nomeei Divider pois irei utilizar dois estilos de divisores-->
+
+<div class="divider-1"> 
+
+</div>
+
+<section>
+
 </section>
     </main>
     <footer>
