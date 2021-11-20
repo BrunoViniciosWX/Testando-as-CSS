@@ -1,0 +1,158 @@
+/* Vamos começar configurando os espaçamentos, padronização do layout de todas as páginas 
+e as fontes de texto da página toda */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* O asterisco serve para se referir a todas as tags ao mesmo tempo, ela engloba para podermos
+padronizar uma mesma configuração em todas as tags!
+Margin e Padding se referem ao tamanho da Box Model
+E Box-Sizing se refere ao comportamento dimensional dessa Box Model que colocamos para se comportar
+como uma border-box, ou seja, calcular os espaçamentos apartir da border ( borda ) que é uma 
+das dimensões da Box Model
+*/
+
+ a {
+     text-decoration: none;
+ }
+
+ /* Todas as tags só podem utilizar uma variável se ela estiver dentro da própria tag ou da tag
+ onde ela está, sendo assim, a tag h1 por estar dentro do body poderia utilizar as variáveis que
+ estão no Body
+ Por isso criamos as variáveis no Root, ele se refere ao HTML inteiro e assim qualquer variável
+ dentro dele pode ser acessado por todas as outras tags dentro do HTML*/
+:root {
+    --color: orange;
+    --text-color: white;
+    --title-color: rgb(230, 181, 68);
+    --header-height: 4.5rem;
+    font-size: 100%;
+}
+
+#header {
+    border-bottom: 1px solid rgb(156, 149, 149);
+    margin-bottom: 2rem;
+    height: var(--header-height);
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: black;
+}
+
+
+ img {
+     width: 100%;
+     height: auto;
+ }
+body {
+    color: var(--text-color) ;
+    background: rgb(0, 0, 0);
+    font: 400 1rem 'System', system;
+    -webkit-font-smoothing : antialiased ; 
+
+}
+
+h1 {
+    color: var(--title-color) ;
+    font: 700 1.875rem 'Poppins', sans-serif ;
+    -webkit-font-smoothing: auto;
+}
+
+main {
+    margin-top: var(--header-height);
+}
+
+nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Agora vamos editar a Logo utilizando nossas variáveis de cores
+Para se referir a uma class nas CSS, digito ponto antes 
+Se quiser mexer em um elemento específico dentro da class, digita class e o nome
+do elemento
+ */
+.logo {
+    font: 700 1.31rem 'Brush Script MT', cursive;
+    color: var(--text-color);
+}
+.logo span {
+    color: var(--color);
+}
+
+.container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.divider-1 {
+    height: 1px;
+    background: linear-gradient( 
+        270deg
+        var(--color) 
+        ) ;
+
+}
+
+#home {
+    overflow: hidden;
+}
+
+#home .container {
+    margin: 0;
+
+}
+
+#home .image::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    background: var(--color);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#home .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    max-width: 100%;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.button {
+    color: var(--text-color);
+    background: var(--color);
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.35rem;
+    font: 500 1.5rem 'Brush Script MT', cursive;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: rgb(196, 118, 0);
+}
